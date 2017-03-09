@@ -1,6 +1,6 @@
-# test
+# PWR boilerplats
 
-> A Vue.js project
+vue + wp
 
 ## Build Setup
 
