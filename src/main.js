@@ -37,6 +37,6 @@ import store from './store'
 new Vue({
   el: '#app',
   store,
-  router,
+//  router,
   render: h => h(App)
 })
