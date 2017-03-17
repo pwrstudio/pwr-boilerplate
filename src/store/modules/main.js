@@ -4,7 +4,7 @@ import * as getterNames from '../getterNames'
 import * as mutationTypes from '../mutationTypes'
 
 const state = {
-  hello: 'world'
+  posts: []
 }
 
 const getters = {
@@ -14,14 +14,14 @@ const getters = {
 }
 
 const actions = {
-  async [actionTypes.HELLO_WORLD] ({ commit, getters, state }) {
-    commit(mutationTypes.HELLO, await api.getPosts())
+  async [actionTypes.GET_POSTS] ({ commit, getters, state }) {
+    commit(mutationTypes.SET_POSTS, await api.getPosts())
   }
 }
 
 const mutations = {
-  [mutationTypes.HELLO] (state, world) {
-    state.hello = world
+  [mutationTypes.SET_POSTS] (state, data) {
+    state.posts = data
   }
 }
 

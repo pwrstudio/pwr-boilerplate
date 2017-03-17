@@ -206,19 +206,68 @@ function image_size_setup()
 // -------
 // -------
 // CUSTOMIZE EDITOR
-// add_filter('acf/fields/wysiwyg/toolbars', 'my_toolbars');
-// function my_toolbars($toolbars)
+add_filter('acf/fields/wysiwyg/toolbars', 'my_toolbars');
+function my_toolbars($toolbars)
+{
+    $toolbars['Full' ] = array();
+    $toolbars['Full' ][1] = array('italic', 'bullist', 'link', 'unlink');
+
+    // remove the 'Basic' toolbar completely
+    unset($toolbars['Basic' ]);
+
+    // return $toolbars - IMPORTANT!
+    return $toolbars;
+}
+
+
+// -------
+// -------
+// -------
+// ADD CUSTOM FORMATS TO EDITOR
+// function my_mce_buttons_2($buttons)
 // {
-//
-//     $toolbars['Full' ] = array();
-//     $toolbars['Full' ][1] = array('italic', 'bullist', 'link', 'unlink');
-//
-//     // remove the 'Basic' toolbar completely
-//     unset($toolbars['Basic' ]);
-//
-//     // return $toolbars - IMPORTANT!
-//     return $toolbars;
+//     $buttons[] = 'styleselect';
+//     return $buttons;
 // }
+// add_filter('mce_buttons_2', 'my_mce_buttons_2');
+// // Callback function to filter the MCE settings
+// function my_mce_before_init_insert_formats($init_array)
+// {
+//     if (get_post_type() == "page" || get_post_type() == "post") {
+//         $texts = get_posts(array('post_type' => 'text', 'posts_per_page' => -1));
+//         var_dump($texts);
+//         foreach ($texts as $text) {
+//             $style_formats[] = array(
+//           'title' => $text->post_title,
+//           'inline' => 'span',
+//           'classes' => 'text-link ' . $text->post_name,
+//           'wrapper' => true,
+//           'attributes' => array('data-href' => $text->post_name, 'data-id' => strval($text->ID))
+//         );
+//         }
+//     }
+//
+//     if (get_post_type() == "item") {
+//         $cats = get_terms(array('taxonomy' => 'collection', 'hide_empty' => false));
+//         foreach ($cats as $cat) {
+//             $style_formats[] = array(
+//             'title' => $cat->name,
+//             'inline' => 'span',
+//             'classes' => 'collection-link ' . $cat->slug,
+//             'wrapper' => true,
+//             'attributes' => array('data-href' => $cat->slug, 'data-id' => strval($cat->term_id))
+//           );
+//         }
+//     }
+//
+//     // var_dump($style_formats);
+//
+//     $init_array['style_formats'] = json_encode($style_formats);
+//     return $init_array;
+// }
+// add_filter('tiny_mce_before_init', 'my_mce_before_init_insert_formats');
+
+
 
 // -------
 // -------
