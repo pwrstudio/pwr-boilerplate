@@ -7,7 +7,7 @@
 <script>
 import {mapState, mapActions} from 'vuex'
 export default {
-  name: 'template',
+  name: 'temp',
   data () {
     return {
       msg: 'PWR'

@@ -1,1 +1,1 @@
-export const HELLO = 'HELLO'
+export const SET_POSTS = 'SET_POSTS'

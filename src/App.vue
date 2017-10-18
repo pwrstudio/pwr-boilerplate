@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <template></template>
+    <temp></temp>
   </div>
 </template>
 
 <script>
 import {mapState, mapActions} from 'vuex'
-import template from './components/template'
+import temp from './components/temp'
 
 export default {
   name: 'app',
   components: {
-    template
+    temp
   },
   computed: {
     ...mapState([
@@ -55,4 +55,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 </style>

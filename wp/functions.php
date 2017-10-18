@@ -276,3 +276,18 @@ function my_toolbars($toolbars)
 // add_filter('acf/settings/google_api_key', function ($value) {
 //     return 'AIzaSyA5-e0tQI0E6nqkbdKr19d9jUx7vlDj4Vg';
 // });
+
+// Allow custom order in REST 
+add_action('admin_init', 'posts_order');
+function posts_order()
+{
+  add_post_type_support('post', 'page-attributes');
+}
+function my_rest_post_query($args, $request)
+{
+    $args['orderby'] = 'menu_order';
+    $args['order']   = 'asc';
+
+    return $args;
+}
+add_filter('rest_post_query', 'my_rest_post_query', 10, 2);
