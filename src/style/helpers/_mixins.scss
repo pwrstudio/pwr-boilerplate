@@ -3,7 +3,7 @@
 /// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
 @mixin clearfix {
   &::after {
-    clear  : both;
+    clear: both;
     content: '';
     display: table;
   }
@@ -13,40 +13,40 @@
 /// Values of text-overflow are: clip, ellipsis, or a string
 ///
 @mixin truncate-text($overflow: ellipsis) {
-  overflow     : hidden;
+  overflow: hidden;
   text-overflow: $overflow; //
-  white-space  : nowrap;
+  white-space: nowrap;
 }
 ///
 /// Helper to set height and width
 ///
 @mixin size($width, $height: $width) {
   height: $height;
-  width : $width;
+  width: $width;
 }
 ///
 /// Helper to center element vertically and horizontally in parent
 ///
 @mixin center {
-  left     : 50%;
-  position : absolute;
-  top      : 50%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
 ///
 /// Helper to center element vertically in parent
 ///
 @mixin center-vertical {
-  position : absolute;
-  top      : 50%;
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
 }
 ///
 /// Helper to center element horizontally in parent
 ///
 @mixin center-horizontal {
-  left     : 50%;
-  position : absolute;
+  left: 50%;
+  position: absolute;
   transform: translateX(-50%);
 }
 @mixin hide-scroll {
@@ -70,12 +70,12 @@
 }
 */
 @mixin element( $name ) {
-   @at-root #{&}__#{$name}{
+  @at-root #{&}__#{$name} {
     @content;
   }
 }
 @mixin modifier( $name ) {
-   @at-root #{&}--#{$name}{
+  @at-root #{&}--#{$name} {
     @content;
   }
 }

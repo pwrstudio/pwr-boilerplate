@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>{{msg}}</h1>
+    <div class='message'>
+      <p class='message__text message__text--active'>{{msg}}</p>
+    </div>
   </div>
 </template>
 
@@ -39,4 +41,17 @@ export default {
 @import '../style/helpers/_mixins.scss';
 @import '../style/helpers/_responsive.scss';
 @import '../style/_variables.scss';
+
+.message {
+  padding: 20px;
+  background: blue;
+
+  &__text {
+    background: red;
+
+    &--active {
+      color: green;
+    }
+  }
+}
 </style>
