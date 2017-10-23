@@ -8,18 +8,16 @@
 import {mapState, mapActions} from 'vuex'
 export default {
   name: 'temp',
-  data () {
+  data() {
     return {
       msg: 'PWR'
     }
   },
   computed: {
-    ...mapState([
-      'main'
-    ])
+    ...mapState(['main'])
   },
   head: {
-    title () {
+    title() {
       return {
         inner: this.title
       }
@@ -28,17 +26,17 @@ export default {
   methods: {
     ...mapActions(['GET_POSTS'])
   },
-  mounted () {
+  mounted() {
     this.GET_POSTS()
   },
   watch: {
-    '$route' (to, from) {}
+    $route(to, from) {}
   }
 }
 </script>
 
 <style scoped lang='scss'>
-@import "../style/helpers/_mixins.scss";
-@import "../style/helpers/_responsive.scss";
-@import "../style/_variables.scss";
+@import '../style/helpers/_mixins.scss';
+@import '../style/helpers/_responsive.scss';
+@import '../style/_variables.scss';
 </style>

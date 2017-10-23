@@ -7,13 +7,13 @@ const state = {
 }
 
 const actions = {
-  async [actionTypes.GET_POSTS] ({ commit, state }) {
+  async [actionTypes.GET_POSTS]({commit, state}) {
     commit(mutationTypes.SET_POSTS, await api.getPosts())
   }
 }
 
 const mutations = {
-  [mutationTypes.SET_POSTS] (state, data) {
+  [mutationTypes.SET_POSTS](state, data) {
     state.posts = data
   }
 }

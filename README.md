@@ -1,6 +1,8 @@
-# PWR boilerplats
+# PWR Boilerplate
 
-vue + wp
+vue (+ wp)
+
+Based on vue-cli/webpack
 
 ## Build Setup
 
@@ -24,4 +26,21 @@ npm run e2e
 npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Formatting
+
+[prettier](https://github.com/prettier/prettier/) + [standard](https://standardjs.com/)
+
+## (S)CSS method
+
+[BEM](http://getbem.com/) 
+
+## Recommended editor
+
+(VS code)[https://code.visualstudio.com/]
+
+## Useful libraries/components
+
+[swiper](https://github.com/nolimits4web/swiper/)
+[fuse.js](http://fusejs.io/)
+[vue-slideout](https://github.com/vouill/vue-slideout)
+[vue-scrollto](https://github.com/rigor789/vue-scrollto)

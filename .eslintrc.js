@@ -7,11 +7,9 @@ module.exports = {
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
   extends: 'standard',
   // required to lint *.vue files
-  plugins: [
-    'html'
-  ],
+  plugins: ['html'],
   // add your custom rules here
-  'rules': {
+  rules: {
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // allow async-await
@@ -19,6 +17,9 @@ module.exports = {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     // warn about unused variables, rather than erroring
-    'no-unused-vars': 1
+    'no-unused-vars': 1,
+    // to avoid conflict between prettier formatter and standard js linter
+    // ref. https://github.com/prettier/prettier/issues/1139
+    'space-before-function-paren': 0
   }
 }

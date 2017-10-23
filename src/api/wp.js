@@ -8,13 +8,16 @@ Vue.use(VueResource)
 Vue.http.options.crossOrigin = true
 
 export default {
-  getPosts () {
+  getPosts() {
     return new Promise((resolve, reject) => {
-      Vue.http.get(API_ROOT + 'posts?per_page=5').then(response => {
-        resolve(response.body)
-      }, (response) => {
-        reject()
-      })
+      Vue.http.get(API_ROOT + 'posts?per_page=5').then(
+        response => {
+          resolve(response.body)
+        },
+        response => {
+          reject()
+        }
+      )
     })
   }
 }
