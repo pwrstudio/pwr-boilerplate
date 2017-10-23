@@ -36,11 +36,11 @@ npm test
 
 ## Recommended editor
 
-(VS code)[https://code.visualstudio.com/]
+[VS code](https://code.visualstudio.com/)
 
 ## Useful libraries/components
 
-[swiper](https://github.com/nolimits4web/swiper/)
-[fuse.js](http://fusejs.io/)
-[vue-slideout](https://github.com/vouill/vue-slideout)
-[vue-scrollto](https://github.com/rigor789/vue-scrollto)
+- [swiper](https://github.com/nolimits4web/swiper/)
+- [fuse.js](http://fusejs.io/)
+- [vue-slideout](https://github.com/vouill/vue-slideout)
+- [vue-scrollto](https://github.com/rigor789/vue-scrollto)
