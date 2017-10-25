@@ -44,3 +44,4 @@ npm test
 - [fuse.js](http://fusejs.io/)
 - [vue-slideout](https://github.com/vouill/vue-slideout)
 - [vue-scrollto](https://github.com/rigor789/vue-scrollto)
+- [bulma] (https://bulma.io/)
