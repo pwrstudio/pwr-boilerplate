@@ -45,3 +45,4 @@ npm test
 - [vue-slideout](https://github.com/vouill/vue-slideout)
 - [vue-scrollto](https://github.com/rigor789/vue-scrollto)
 - [bulma](https://bulma.io/)
+- [perfect-scrollbar](https://github.com/utatti/perfect-scrollbar)
