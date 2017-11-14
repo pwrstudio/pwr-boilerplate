@@ -38,6 +38,9 @@ npm test
 
 [VS code](https://code.visualstudio.com/)
 
+## Vue-specific style guide
+[Vue Style Guide](https://vuejs.org/v2/style-guide/)
+
 ## Useful libraries/components
 
 - [swiper](https://github.com/nolimits4web/swiper/)
