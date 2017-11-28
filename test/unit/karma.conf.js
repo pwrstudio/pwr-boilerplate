@@ -32,14 +32,14 @@ var webpackConfig = merge(baseConfig, {
 delete webpackConfig.entry
 
 // Use babel for test files too
-webpackConfig.module.loaders.some(function (loader, i) {
+webpackConfig.module.loaders.some(function(loader, i) {
   if (/^babel(-loader)?$/.test(loader.loader)) {
     loader.include.push(path.resolve(projectRoot, 'test/unit'))
     return true
   }
 })
 
-module.exports = function (config) {
+module.exports = function(config) {
   config.set({
     // to run in additional browsers:
     // 1. install corresponding karma launcher
@@ -58,10 +58,7 @@ module.exports = function (config) {
     },
     coverageReporter: {
       dir: './coverage',
-      reporters: [
-        { type: 'lcov', subdir: '.' },
-        { type: 'text-summary' }
-      ]
+      reporters: [{type: 'lcov', subdir: '.'}, {type: 'text-summary'}]
     }
   })
 }

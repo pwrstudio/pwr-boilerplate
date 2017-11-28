@@ -7,9 +7,10 @@
 </template>
 
 <script>
-import {mapState, mapActions} from 'vuex'
+import {mapState} from 'vuex'
 export default {
   name: 'temp',
+  props: [],
   data() {
     return {
       msg: 'PWR'
@@ -18,22 +19,14 @@ export default {
   computed: {
     ...mapState(['main'])
   },
-  head: {
-    title() {
-      return {
-        inner: this.title
-      }
-    }
+  mounted() {},
+  updated: function() {
+    this.$nextTick(function() {
+      // Code that will run only after the
+      // entire view has been re-rendered
+    })
   },
-  methods: {
-    ...mapActions(['GET_POSTS'])
-  },
-  mounted() {
-    this.GET_POSTS()
-  },
-  watch: {
-    $route(to, from) {}
-  }
+  methods: {}
 }
 </script>
 

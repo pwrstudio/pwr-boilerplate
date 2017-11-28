@@ -39,6 +39,7 @@ npm test
 [VS code](https://code.visualstudio.com/)
 
 ## Vue-specific style guide
+
 [Vue Style Guide](https://vuejs.org/v2/style-guide/)
 
 ## Useful libraries/components
@@ -49,3 +50,5 @@ npm test
 - [vue-scrollto](https://github.com/rigor789/vue-scrollto)
 - [bulma](https://bulma.io/)
 - [perfect-scrollbar](https://github.com/utatti/perfect-scrollbar)
+- [reframe.js](https://github.com/dollarshaveclub/reframe.js/)
+- [date-fns](https://date-fns.org)

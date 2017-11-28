@@ -1,4 +1,4 @@
-import api from '../../api/wp'
+import api from '../../service/wp'
 import * as actionTypes from '../actionTypes'
 import * as mutationTypes from '../mutationTypes'
 

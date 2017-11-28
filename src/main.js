@@ -1,35 +1,34 @@
 import Vue from 'vue'
 import 'babel-polyfill'
-// import VueRouter from 'vue-router'
+import VueRouter from 'vue-router'
+import VueHead from 'vue-head'
+// --- GOOGLE ANALYTICS
 // import ga from 'vue-ga'
-// import VueHead from 'vue-head'
-import App from './App'
-import store from './store'
+// --- ERROR TRACKING
 // import Raven from 'raven-js'
 // import RavenVue from 'raven-js/plugins/vue'
+import App from './App'
+import store from './store'
+import temp from './components/temp'
+
+Vue.use(VueRouter)
+Vue.use(VueHead)
+
+const router = new VueRouter({
+  mode: 'history',
+  routes: [
+    {
+      path: '/:language',
+      name: 'home',
+      component: temp
+    }
+  ]
+})
 
 // Raven
 //     .config('https://---0@sentry.io/---')
 //     .addPlugin(RavenVue, Vue)
 //     .install()
-
-// Vue.use(VueRouter)
-
-// Vue.use(VueHead)
-
-// const router = new VueRouter({
-//   mode: 'history',
-//   routes: [
-//     {
-//       path: '/:lang/:slug',
-//       name: 'text',
-//       component: overview
-//     }
-//   ],
-//    scrollBehavior (to, from, savedPosition) {
-//      return { x: 0, y: 0 }
-//    }
-// })
 
 // ga(router, 'UA-XXXXX')
 
@@ -37,6 +36,6 @@ import store from './store'
 new Vue({
   el: '#app',
   store,
-//  router,
+  router,
   render: h => h(App)
 })
