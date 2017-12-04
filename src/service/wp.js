@@ -15,7 +15,7 @@ export default {
           resolve(response.body)
         },
         response => {
-          reject()
+          reject(response)
         }
       )
     })

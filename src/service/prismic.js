@@ -15,7 +15,7 @@ export default {
           },
           err => {
             console.log('Something went wrong: ', err)
-            reject()
+            reject(err)
           }
         )
     })

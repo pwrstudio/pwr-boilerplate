@@ -1,12 +1,10 @@
 import Vue from 'vue'
-import temp from 'src/components/temp'
+import temp from '@/components/temp'
 
 describe('temp.vue', () => {
   it('should render correct contents', () => {
-    const vm = new Vue({
-      el: document.createElement('div'),
-      render: h => h(temp)
-    })
-    expect(vm.$el.querySelector('.message__text').textContent).to.equal('PWR')
+    const Constructor = Vue.extend(temp)
+    const vm = new Constructor().$mount()
+    expect(vm.$el.querySelector('.message__text').textContent).toEqual('PWR')
   })
 })
