@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import temp from '@/components/temp'
+
+const temp = () => import('@/components/temp')
 
 Vue.use(Router)
 
